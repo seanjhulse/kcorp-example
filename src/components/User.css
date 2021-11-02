@@ -1,0 +1,14 @@
+.User {
+    display: flex;
+}
+.Username {
+    font-weight: bold;
+}
+.Settings {
+    margin-left: auto;
+}
+.Dropdown-Icon{
+    vertical-align: top;
+    margin-top: 3px;
+    margin-left: 5px;
+}

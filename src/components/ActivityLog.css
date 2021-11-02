@@ -1,0 +1,16 @@
+.ActivityLog {
+    margin-top: 25px;
+}
+.ActivityLog-Title {
+    font-weight: bold;
+    color: #80ccff;
+}
+.ActivityLog-List {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.ActivityLog-ListItem {
+    list-style: none;
+    font-size: 1.15rem;
+}

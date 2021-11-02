@@ -1,0 +1,13 @@
+.ChatBox {
+    padding: 25px;
+    max-height: 300px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    background-color: #121212;
+    border-radius: 10px;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.ChatBox::-webkit-scrollbar {
+  display: none;
+}

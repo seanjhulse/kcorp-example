@@ -1,0 +1,19 @@
+.Sidebar {
+    width: 20%;
+    min-height: 100vh;
+    background-color: rgb(23, 109, 167);
+    text-align: left;
+    color: white;
+    padding: 25px;
+    font-size: 1.25rem;
+}
+.ShuffleButton {
+    border: 0;
+    padding: 7px;
+    border-radius: 5px;
+    margin: 20px;
+    text-align: center;
+}
+.ShuffleButton:hover {
+    cursor: pointer;
+}

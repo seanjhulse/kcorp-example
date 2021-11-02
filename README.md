@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Example
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Styling
 
-## Available Scripts
+Notice `App.css` is using Flexbox. Flexbox is a very useful tool in CSS that helps to design layouts. Flexbox is slowly
+being replaced by CSS grid, but it's still popular. 
 
-In the project directory, you can run:
+When you define a `div` as a `display: flex` that doesn't do anything to the `div`. Instead, it changes the way its
+*children* are laid out. A *parent* with a `display: flex` will have children that layout in a grid pattern
+left-to-right by default. If you set the children div widths, they will honor the width in the flex layout. Two children
+with `width: 50%` will each share 50% of the parent's width; see example below: 
 
-### `npm start`
+```HTML
+<div style="display: flex">
+    <div style="width: 50%">
+        hello.
+    </div>
+    <div style="width: 50%">
+        world.
+    </div>
+</div>
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+In the example app, the sidebar has a width of 33% and the main body has a width of 66%.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+When building websites, it's often easy to try and visualize them as grids. Try to split everything up into grids. Then
+inside each grid, split them up again. Keep splitting them up until you get your smallest component. 
 
-### `npm test`
+In your screenshot you sent, there is one top-level grid. A sidebar and a main page. Two components side by side. In
+your "main page" there is another grid. A video with a caption box on the right. Again, that means you have two
+components side by side so they are a grid *inside* the main page component. Much like a Russian nesting doll, you'll
+need to design your webpage as a grid of grids.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Components
 
-### `npm run build`
+Here is a basic component:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```JS
+import './Sidebar.css';
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+function Sidebar() {
+  return (
+    <div className="Sidebar">
+      
+    </div>
+  );
+}
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+export default Sidebar;
+```
 
-### `npm run eject`
+Components can just be plain HTML. Why use a component? They can be reused. You can duplicate code in HTML without
+having to write it multiple times.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```JS
+function App() {
+  return (
+    <div className="App">
+      <Sidebar />
+      <Sidebar />
+      <Sidebar />
+    </div>
+  );
+}
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+That code above would create three sidebars but I only had to write one sidebar class.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

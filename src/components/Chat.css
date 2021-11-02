@@ -1,0 +1,8 @@
+.ChatUsername {
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 10px;
+    color: white;
+    font-weight: bold;
+}

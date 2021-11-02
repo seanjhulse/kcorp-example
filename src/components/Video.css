@@ -1,0 +1,18 @@
+.Video {
+    width: 50%;
+    margin: 20px;
+    position: relative;
+}
+.Video iframe {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+}
+.VideoTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+}

@@ -1,0 +1,16 @@
+.Caption {
+    width: 50%;
+    color: white;
+    max-height: 500px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    background-color: #121212;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 20px;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.Caption::-webkit-scrollbar {
+  display: none;
+}

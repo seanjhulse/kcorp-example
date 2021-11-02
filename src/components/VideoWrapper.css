@@ -1,0 +1,4 @@
+.VideoBox {
+    display: flex;
+    min-height: 400px;
+}
