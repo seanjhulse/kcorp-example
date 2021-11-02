@@ -66,3 +66,16 @@ function App() {
 
 That code above would create three sidebars but I only had to write one sidebar class.
 
+## State
+
+Checkout the ActivityLog for an example of state. The "Component Lifecycle" shows how the state can be mutated on a
+button press and when it updates, we re-render the activities. 
+
+The lifecycle is like this:
+1. Render the first page (iterate over the activities)
+2. On clicking the button, we *shuffle* the items in the array
+3. After shuffling the items we call `this.setState...` 
+4. That triggers a re-render of the component with the new state
+
+`this.setState` always will re-render the component. It's important to not do this *too* often, but it's a pretty common
+operation. Just don't call `this.setState` a thousand times in a second. 
